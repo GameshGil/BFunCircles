@@ -51,3 +51,9 @@ TagManager:
   - name: Hero
     uniqueID: 3922286263
     locked: 0
+  - name: Canvas
+    uniqueID: 979337245
+    locked: 0
+  - name: Rock
+    uniqueID: 1548253025
+    locked: 0
