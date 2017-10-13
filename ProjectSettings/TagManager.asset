@@ -45,15 +45,18 @@ TagManager:
   - name: Background
     uniqueID: 1470669581
     locked: 0
+  - name: Rock
+    uniqueID: 1548253025
+    locked: 0
   - name: Gem
     uniqueID: 2697365769
     locked: 0
   - name: Hero
     uniqueID: 3922286263
     locked: 0
+  - name: Enemy
+    uniqueID: 2321208617
+    locked: 0
   - name: Canvas
     uniqueID: 979337245
-    locked: 0
-  - name: Rock
-    uniqueID: 1548253025
     locked: 0

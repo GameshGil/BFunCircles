@@ -5,10 +5,9 @@ using UnityEngine;
 public class HeroScript : MonoBehaviour 
 {
     public float speed = 10f;
-
     private Rigidbody2D myBody;
-
     public int scores = 0;
+    public bool isDead = false;
 
 	void Start () 
 	{

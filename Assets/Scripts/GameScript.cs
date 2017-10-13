@@ -10,21 +10,33 @@ public class GameScript : MonoBehaviour
     public Text scoreText;
     public Text looseText;
     public int maxScore;
-    private HeroScript heroscript;
+    private HeroScript heroScript;
 
 	void Start () 
 	{
-        heroscript = player.GetComponent<HeroScript>();
+        heroScript = player.GetComponent<HeroScript>();
 	}
 	
 	void Update () 
 	{
-        scoreText.text = heroscript.scores.ToString() + " / " + maxScore.ToString();
+        scoreText.text = heroScript.scores.ToString() + " / " + maxScore.ToString();
 
-        if (heroscript.scores >= maxScore)
+        if (heroScript.scores >= maxScore && !heroScript.isDead)
         {
             looseText.text = "Ты победил!";
             SceneManager.LoadScene(0);
         }
+        if (heroScript.isDead)
+        {
+            looseText.text = "Ты проиграл!";
+            looseText.color = new Color(1f, 0.2f, 0);
+            StartCoroutine(Restart());
+        }
 	}
+
+    private IEnumerator Restart()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(0);
+    }
 }
